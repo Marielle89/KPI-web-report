@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ваша сторінка</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<section>
+    <div class="headers">
+        <h1>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h1>
+        <h1>З ДИСЦИПЛІНИ "ІНТЕРНЕТ-ТЕХНОЛОГІЇ ТА ПРОЕКТУВАННЯ WEB-ЗАСТОСУВАНЬ"</h1>
+        <h2>Студентки групи ЗПІ-зп 31 Циганок Марії Іванівни</h2>
+    </div>
+    <div class="top-tabs-container">
+        <label for="main-tab-1">ЛАБОРАТОРНА РОБОТА №1</label>
+        <label for="main-tab-2">ЛАБОРАТОРНА РОБОТА №2</label>
+        <label for="main-tab-3">ЛАБОРАТОРНА РОБОТА №3</label>
+        <label for="main-tab-4">ЛАБОРАТОРНА РОБОТА №4</label>
+        <label for="main-tab-5">ЛАБОРАТОРНА РОБОТА №5</label>
+        <label for="main-tab-6">ЛАБОРАТОРНА РОБОТА №6</label>
+        <label for="main-tab-7">ЛАБОРАТОРНА РОБОТА №7</label>
+    </div>
+    <input class="tab-radio" id="main-tab-1" name="main-group" type="radio" checked="checked"/>
+    <div class="tab-content">
+        <div class="sub-tabs-container">
+            <label for="sub-tab-1">Опис предметного середовища</label>
+            <label for="sub-tab-2">Тема. Мета. Розташування</label>
+            <label for="sub-tab-3">Структруа головної сторінки</label>
+            <label for="sub-tab-4">HTML таблиці</label>
+            <label for="sub-tab-5">HTML зображення</label>
+            <label for="sub-tab-6">HTML списки</label>
+            <label for="sub-tab-7">Висновки</label>
+        </div>
+        <div>
+            <!-- Sub Tab -->
+            <input class="tab-radio" id="sub-tab-1" name="sub-group" type="radio" checked="checked">
+            <div class="sub-tab-content">
+                <div class="sub-tab-content-wrapper">
+                    <h1>Опис предметного середовища</h1>
+                    <p>Працівників аеропорту можна підрозділити на пілотів, диспетчерів, техніків, касирів, працівників служби безпеки, довідникової служби та інших, які адміністративно відносяться кожен до свого відділу. Кожна з перерахованих категорій працівників має унікальні атрибути-характеристики, що визначаються професійною спрямованістю. У відділах існує розбиття працівників на бригади. Відділи очолюються начальниками, які представляють собою адміністрацію аеропорту. У функції адміністрації входить планування рейсів, складання розкладів, формування кадрового складу аеропорту. За кожним літаком закріплюється бригада пілотів, техніків і обслуговуючого персоналу. Пілоти зобов'язані проходити кожен рік медогляд, і якщо не пройшли медогляд, тоді їм необхідно перевести на іншу роботу. Літак повинен своєчасно оглядатися техніками і при необхідності ремонтуватися. Підготовка до рейсу включає в себе технічну частину (техогляд, заправка необхідної кількості палива) і обслуговуючу частина (прибирання салону, запас продуктів харчування тощо).
+                        У розкладі вказується тип літака, рейс, дні вильоту, час вильоту і прильоту, маpшpут (початковий і кінцевий пункти призначення, пункт пересадки), вартість квитка. Квитки на авіарейси можна придбати заздалегідь або забронювати в авіакасах. Ціна квитка залежить не тільки від маpшpуту, але і від часу вильоту (в незручний час - ніч, ранок - ціна квитка нижче). До відправлення рейсу, якщо в цьому є необхідність, квиток можна повернути. Авіарейси можуть бути затримані через погодні умови, технічні несправності, а також можуть бути скасовані, якщо не продано менше встановленого мінімуму квитків.
+                        Авіарейси можна розділити на наступні категорії: внутрішні, міжнародні, чартерні, вантажоперевезення, спеціальні рейси. Пасажир при посадці в літак повинен пред'явити квиток, паспорт, а для міжнародного рейсу зобов'язаний також пред'явити закордонний паспорт і пройти митний огляд. Пасажири можуть здавати свої речі в багажне відділення. Hа рейси вантажоперевезення та спеціальні рейси квитки не продаються. Для спеціальних рейсів не існує розкладу. Квитки на чартерні рейси розподіляє агенція, яка його організувало.
+                    </p>
+                    <h2>Функції:</h2>
+                    <ol>
+                        <li>1. Отримати список і загальне число всіх працівників аеропорту, начальників відділів, працівників вказаного відділу, за стажем роботи в аеропорту, статевою ознакою, віком, ознакою наявності та кількості дітей, за pозміpом заробітної плати. </li>
+                        <li>2. Отримати перелік і загальне число працівників у бригаді, по всіх відділах, у зазначеному відділі, обслуговуючих конкретний рейс, за віком, сумарною (середньої) зарплаті у бригаді.</li>
+                        <li>3. Отримати перелік і загальне число пілотів, які пройшли медогляд або не пройшли його у вказаний рік, за статевою ознакою, віком, розміру заробітної плати.</li>
+                        <li>4. Отримати перелік і загальне число літаків приписаних до аеропорту, що знаходяться в ньому в зазначений час, за часом надходження в аеропорту, за кількістю скоєних рейсів.</li>
+                        <li>5. Отримати перелік і загальне число літаків, що пройшли техогляд за певний період часу, відправлених в ремонт в зазначений час, ремонтувалися задане число разів, за кількістю скоєних рейсів до ремонту, за віком літака.</li>
+                        <li>6. Отримати перелік і загальне число рейсів за вказаним маpшpутом, по тривалості перельоту, за ціною квитка і за всіма цими критеріями відразу.</li>
+                        <li>7. Отримати перелік і загальне число скасованих рейсів повністю, у зазначеному напрямку, за вказаним маpшpутом, за кількістю незатребуваних місць, за відсотковим співвідношенням незатребуваних місць. </li>
+                        <li>8. Отримати перелік і загальне число затриманих рейсів повністю, із зазначеної причини, за вказаним маpшpутом, і кількість зданих квитків за час затримки. </li>
+                        <li>9. Отримати перелік і загальне число рейсів, якими літають літаки заданого типу і середня кількість проданих квитків на певні маpшpути, по тривалості перельоту, за ціною квитка, часу вильоту. </li>
+                        <li>10. Отримати перелік і загальне число авіарейсів зазначеної категорії, в певному напрямку, з вказаним типом літака.</li>
+                        <li>11. Отримати перелік і загальне число пасажирів на даному рейсі, які відлетіли у зазначений день, відлетіли за кордон у зазначений день, за ознакою здачі речей в багажне відділення, за статевою ознакою, за віком. </li>
+                        <li>12. Отримати перелік і загальне число вільних і заброньованих місць на зазначеному рейсі, на визначений день, за вказаним маpшpутом, за ціною, за часом вильоту. </li>
+                        <li>13. Отримати загальне число зданих квитків на деякий рейс, у вказаний день, за певним маpшpутом, за ціною квитка, за віком, статтю.</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- Sub Tab -->
+            <input class="tab-radio" id="sub-tab-2" name="sub-group" type="radio">
+            <div class="sub-tab-content">
+                <div class="sub-tab-content-wrapper">
+                    <h1>Тема, мета, місце розташування WEB-застосунка та місце звітного HTML-документу</h1>
+                    <h2><b>Тема: </b>СТРУКТУРА HTML-ДОКУМЕНТА. ВИБІР ПРЕДМЕТНОЇ ГАЛУЗІ. РОБОТА З ПОСИЛАННЯМИ, ТАБЛИЦЯМИ, ЗОБРАЖЕННЯМИ, СПИСКАМИ в HTML-ДОКУМЕНТІ.</h2>
+                    <br/>
+                    <p><b>Мета: </b>придбати практичні навички роботи з HTML-документом, таблицями, зображеннями, посиланнями, списками, формами. Створити шаблон звітного HTML-документом для відображення результатів роботи всіх лабораторних робіт.</p>
+                    <br/>
+                    <p><a href="https://github.com/Marielle89/HTML-report">Посилання на </a>HTML-документ.</p>
+                    <br/>
+                    <p><a href="https://marielle.tech">Посилання </a>на WEB-застосунок.</p>
+                    <br/>
+                    <p>Також додається архив з кодом HTML-документу та WEB-застосунку.</p>
+                </div>
+            </div>
+            <!-- Sub Tab -->
+            <input class="tab-radio" id="sub-tab-3" name="sub-group" type="radio">
+            <div class="sub-tab-content">
+                <div class="sub-tab-content-wrapper">
+                    <h1>Структруа головної сторінки</h1>
+                    <pre>
+                        &lt;!doctype html&gt;
+                        &lt;html lang="en"&gt;
+                        &lt;head&gt;
+                            &lt;meta charset="UTF-8"&gt;
+                            &lt;meta name="viewport"
+                                  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"&gt;
+                            &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+                            &lt;title&gt;Airport. Back office&lt;/title&gt;
+                            &lt;link rel="stylesheet" href="reset.css"&gt;
+                            &lt;link rel="stylesheet" href="styles.css"&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                        &lt;header&gt;
+                            &lt;div class="header_wrapper"&gt;
+                                &lt;div&gt;
+                                    &lt;a href="/"&gt;&lt;img src="/images/logo.jpg" alt="logo" width="120px;" height="50px;"&gt;&lt;/a&gt;
+                                &lt;/div&gt;
+                                &lt;div&gt;
+                                    &lt;ul class="nav_menu"&gt;
+                                        &lt;li&gt;&lt;a href="/about.html"&gt;About airport&lt;/a&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;a href="/"&gt;For passengers&lt;/a&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;a href="/"&gt;For partners&lt;/a&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;a href="/"&gt;Enter to back office&lt;/a&gt;&lt;/li&gt;
+                                    &lt;/ul&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div&gt;
+                                &lt;img srcset="images/plane.jpg, images/plane.jpg 1.5x, images/plane.jpg 2x" src="images/plane.jpg" alt="Plane" /&gt;
+                            &lt;/div&gt;
+                        &lt;/header&gt;
+                        &lt;main&gt;
+                            &lt;section&gt;
+                                &lt;h1&gt;
+                                    Airport. Back Office
+                                &lt;/h1&gt;
+                                &lt;p&gt;
+                                    An airport is an aerodrome with extended facilities, mostly for commercial air transport.
+                                    Airports usually consist of a landing area, which comprises an aerially accessible open space including
+                                    at least one operationally active surface such as a runway for a plane to take off and to land or a helipad,
+                                    and often includes adjacent utility buildings such as control towers, hangars and terminals,
+                                    to maintain and monitor aircraft. Larger airports may have airport aprons, taxiway bridges,
+                                    air traffic control centres, passenger facilities such as restaurants and lounges,
+                                    and emergency services. In some countries, the US in particular,
+                                    airports also typically have one or more fixed-base operators, serving general aviation.
+                                &lt;/p&gt;
+                                &lt;br&gt;
+                                &lt;h2&gt;Essential facilities&lt;/h2&gt;
+                                &lt;p&gt;The following facilities are essential for departing passengers:&lt;/p&gt;
+                                &lt;ol class="facilities"&gt;
+                                    &lt;li&gt;Check-in facilities, including a baggage drop-off&lt;/li&gt;
+                                    &lt;li&gt;Security checks&lt;/li&gt;
+                                    &lt;li&gt;Passport control (for some international flights)&lt;/li&gt;
+                                    &lt;li&gt;Gates&lt;/li&gt;
+                                    &lt;li&gt;Waiting areas&lt;/li&gt;
+                                &lt;/ol&gt;
+                                &lt;br&gt;
+                            &lt;/section&gt;
+                            &lt;section&gt;
+                                &lt;h2&gt;Arrivals&lt;/h2&gt;
+                                &lt;table class="arrivals"&gt;
+                                    &lt;tr&gt;
+                                        &lt;th&gt;FLIGHT NO.&lt;/th&gt;
+                                        &lt;th&gt;DESTINATION&lt;/th&gt;
+                                        &lt;th&gt;SCH. TIME&lt;/th&gt;
+                                        &lt;th&gt;FLIGHT STATUS&lt;/th&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr&gt;
+                                        &lt;td&gt;5F 154&lt;/td&gt;
+                                        &lt;td&gt;DUBAI&lt;/td&gt;
+                                        &lt;td class="delayed"&gt;DELAYED 03:40, 15 JAN&lt;/td&gt;
+                                        &lt;td&gt;DELAYED 03:40&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr&gt;
+                                        &lt;td&gt;5F 612&lt;/td&gt;
+                                        &lt;td&gt;BERLIN BRANDENBURG&lt;/td&gt;
+                                        &lt;td&gt;23:30&lt;/td&gt;
+                                        &lt;td&gt;ESTIMATED 22:52&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr&gt;
+                                        &lt;td&gt;TK 269&lt;/td&gt;
+                                        &lt;td&gt;ISTANBUL&lt;/td&gt;
+                                        &lt;td&gt;08:50&lt;/td&gt;
+                                        &lt;td&gt;&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr&gt;
+                                        &lt;td&gt;H4 474&lt;/td&gt;
+                                        &lt;td&gt;DUBLIN&lt;/td&gt;
+                                        &lt;td class="delayed"&gt;DELAYED 05:10&lt;/td&gt;
+                                        &lt;td&gt;DELAYED 05:10&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr&gt;
+                                        &lt;td&gt;5F 548&lt;/td&gt;
+                                        &lt;td&gt;LONDON STANSTED&lt;/td&gt;
+                                        &lt;td&gt;02:10&lt;/td&gt;
+                                        &lt;td&gt;&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                &lt;/table&gt;
+                                &lt;br&gt;
+                                &lt;br&gt;
+                            &lt;/section&gt;
+                            &lt;section&gt;
+                                &lt;h2&gt;Find cheap flight deals&lt;/h2&gt;
+                                &lt;div&gt;
+                                    &lt;form action="/search.php"&gt;
+                                        &lt;fieldset class="search"&gt;
+                                            &lt;legend&gt;SEARCH:&lt;/legend&gt;
+                                            &lt;label for="leaving_from"&gt;Leaving from:&lt;/label&gt;&lt;br&gt;
+                                            &lt;input type="text" id="leaving_from" name="leaving_from" value="Kyiv"&gt;&lt;br&gt;
+                                            &lt;label for="going_to"&gt;Going to:&lt;/label&gt;&lt;br&gt;
+                                            &lt;input type="text" id="going_to" name="going_to" value="London"&gt;&lt;br&gt;
+                                            &lt;label for="depart"&gt;Departure dates:&lt;/label&gt;&lt;br&gt;
+                                            &lt;input type="datetime-local" id="depart" name="depart"&gt;&lt;br&gt;
+                                            &lt;label for="passengers"&gt;Number of passengers:&lt;/label&gt;&lt;br&gt;
+                                            &lt;select id="passengers" name="passengers"&gt;
+                                                &lt;option value="adult"&gt;1 adult&lt;/option&gt;
+                                                &lt;option value="adult_child"&gt;1 adult 1 child&lt;/option&gt;
+                                                &lt;option value="two_adult"&gt;2 adult&lt;/option&gt;
+                                                &lt;option value="two_adult_one_child"&gt;2 adult 1 child&lt;/option&gt;
+                                                &lt;option value="two_adult_two_child"&gt;2 adult 2 child&lt;/option&gt;
+                                                &lt;option value="two_adult_three_child"&gt;2 adult 3 child&lt;/option&gt;
+                                                &lt;option value="more"&gt;More than 5 people (special price)&lt;/option&gt;
+                                            &lt;/select&gt;&lt;br&gt;
+                                            &lt;input type="submit" value="Submit"&gt;
+                                        &lt;/fieldset&gt;
+                                    &lt;/form&gt;
+                                &lt;/div&gt;
+                            &lt;/section&gt;
+                        &lt;/main&gt;
+                        &lt;footer&gt;&lt;/footer&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                    </pre>
+                </div>
+            </div>
+            <!-- Sub Tab -->
+            <input class="tab-radio" id="sub-tab-4" name="sub-group" type="radio">
+            <div class="sub-tab-content">
+                <div class="sub-tab-content-wrapper">
+                    <h1>HTML таблиці</h1>
+                    <h2>Html code таблиці</h2>
+                    <pre>
+                        &lt;table class="arrivals"&gt;
+                            &lt;tr&gt;
+                                &lt;th&gt;FLIGHT NO.&lt;/th&gt;
+                                &lt;th&gt;DESTINATION&lt;/th&gt;
+                                &lt;th&gt;SCH. TIME&lt;/th&gt;
+                                &lt;th&gt;FLIGHT STATUS&lt;/th&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;5F 154&lt;/td&gt;
+                                &lt;td&gt;DUBAI&lt;/td&gt;
+                                &lt;td class="delayed"&gt;DELAYED 03:40, 15 JAN&lt;/td&gt;
+                                &lt;td&gt;DELAYED 03:40&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;5F 612&lt;/td&gt;
+                                &lt;td&gt;BERLIN BRANDENBURG&lt;/td&gt;
+                                &lt;td&gt;23:30&lt;/td&gt;
+                                &lt;td&gt;ESTIMATED 22:52&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;TK 269&lt;/td&gt;
+                                &lt;td&gt;ISTANBUL&lt;/td&gt;
+                                &lt;td&gt;08:50&lt;/td&gt;
+                                &lt;td&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;H4 474&lt;/td&gt;
+                                &lt;td&gt;DUBLIN&lt;/td&gt;
+                                &lt;td class="delayed"&gt;DELAYED 05:10&lt;/td&gt;
+                                &lt;td&gt;DELAYED 05:10&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;5F 548&lt;/td&gt;
+                                &lt;td&gt;LONDON STANSTED&lt;/td&gt;
+                                &lt;td&gt;02:10&lt;/td&gt;
+                                &lt;td&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/table&gt;
+                    </pre>
+                    <h2>Вигляд таблиці</h2>
+                    <img src="table.png" alt="table">
+                    <div>
+                        <h2>Тегі таблиці</h2>
+                        Для створення таблиці в HTML документі використовується парний тег <code>&lt;table&gt;&lt;/table&gt;</code>.
+                        При створені таблиць застосовуються наступні теги:
+                        <ul class="table_tags">
+                            <li><code>&lt;caption&gt;</code> теґ заголовка таблиці</li>
+                            <li><code>&lt;thead&gt;</code> шапка таблиці</li>
+                            <li><code>&lt;tbody&gt;</code> тіло таблиці</li>
+                            <li><code>&lt;tfoot&gt;</code> нижній колонтитул таблиці (напис, що пояснює)</li>
+                            <li><code>&lt;tr&gt;</code> рядок</li>
+                            <li><code>&lt;th&gt;</code> комірка-заголовок</li>
+                            <li><code>&lt;td&gt;</code> комірка таблиці</li>
+                            <li><code>&lt;col&gt;</code> параметри стовпчиків</li>
+                            <li><code>&lt;colgroup&gt;</code> параметри груп стовпчиків</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Sub Tab -->
+            <input class="tab-radio" id="sub-tab-5" name="sub-group" type="radio">
+            <div class="sub-tab-content">
+                <div class="sub-tab-content-wrapper">
+                    <h1>HTML зображення</h1>
+                    <h2>Html code зображення</h2>
+                    <pre>
+                        &lt;a href="/"&gt;&lt;img src="/images/logo.jpg" alt="logo" width="120px;" height="50px;"&gt;&lt;/a&gt;
+                        &lt;img srcset="images/plane.jpg, images/plane.jpg 1.5x, images/plane.jpg 2x" src="images/plane.jpg" alt="Plane" /&gt;
+                    </pre>
+                    <h2>Вигляд зображення</h2>
+                    <img src="images.png" alt="images">
+                    <div>
+                        <h2>Тегі зображення</h2>
+                        Для відображення зображення на Web-сторінці призначений самозакриваючий, рядковий тег<code>&lt;img&gt;</code>.
+                        Теґ має два обов'язкові атрибути:
+                        <ul class="table_tags">
+                            <li><code>&lt;src&gt;</code> використовується для завантаження зображення, а саме вказує шлях до зображення від файлу HTML.</li>
+                            <li><code>&lt;alt&gt;</code> задає альтернативний текст для випадку, коли картинка не завантажилась або у клієнта є обмеження на обсяг завантаженн.</li>
+                        </ul>
+                        <ul class="table_tags">
+                            <li><code>&lt;srcset&gt;</code> вказує одну або кілька адрес альтернативних зображень;</li>
+                            <li><code>&lt;align&gt;</code> визначає як малюнок буде обтікатися текстом;</li>
+                            <li><code>&lt;border&gt;</code> товщина рамки навколо зображення;</li>
+                            <li><code>&lt;width&gt;</code> ширина зображення;</li>
+                            <li><code>&lt;height&gt;</code> висота зображення;</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Sub Tab -->
+            <input class="tab-radio" id="sub-tab-6" name="sub-group" type="radio">
+            <div class="sub-tab-content">
+                <div class="sub-tab-content-wrapper">
+                    <h1>HTML списки</h1>
+                    <h2>Html code списка</h2>
+                    <pre>
+                        &lt;ul class="nav_menu"&gt;
+                            &lt;li&gt;&lt;a href="/about.html"&gt;About airport&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="/"&gt;For passengers&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="/"&gt;For partners&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="/"&gt;Enter to back office&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    </pre>
+                    <pre>
+                        &lt;ol class="facilities"&gt;
+                            &lt;li&gt;Check-in facilities, including a baggage drop-off&lt;/li&gt;
+                            &lt;li&gt;Security checks&lt;/li&gt;
+                            &lt;li&gt;Passport control (for some international flights)&lt;/li&gt;
+                            &lt;li&gt;Gates&lt;/li&gt;
+                            &lt;li&gt;Waiting areas&lt;/li&gt;
+                        &lt;/ol&gt;
+                    </pre>
+                    <h2>Вигляд списку</h2>
+                    <h3>Невпорядкований список</h3>
+                    <img src="list_ul.png" alt="list">
+                    <h3>Нумерований список</h3>
+                    <img src="list_ol.png" alt="list">
+                    <div>
+                        <h2>Тегі списку</h2>
+                        Невпорядкований список в HTML визначається тегом <code>&lt;ul&gt;</code>, нумерований - <code>&lt;ol&gt;</code>.
+                        Кожен елемент списку повинен починатися з тега <code>&lt;li&gt;</code>.
+                        Між відкритим і закритим тегами &lt;ul&gt; (&lt;ol&gt;) повинен бути один або кілька елементів &lt;li&gt;.
+                    </div>
+                </div>
+            </div>
+            <!-- Sub Tab -->
+            <input class="tab-radio" id="sub-tab-7" name="sub-group" type="radio">
+            <div class="sub-tab-content">
+                <div class="total">
+                    <h1>Висновки</h1>
+                    <p>Під час виконання роботи були використані наступні теги, що відповідають за структуру документу:</p>
+                    <ul>
+                        <li>header</li>
+                        <li>main</li>
+                        <li>section</li>
+                        <li>footer</li>
+                    </ul>
+                    <br>
+                    <p>При реалізації таблиці познайомилась з наступними тегами:</p>
+                    <ul>
+                        <li>table</li>
+                        <li>tr</li>
+                        <li>th</li>
+                        <li>td</li>
+                    </ul>
+                    <br>
+                    <p>При реалізації форми познайомилась з наступними тегами:</p>
+                    <ul>
+                        <li>form</li>
+                        <li>fieldset</li>
+                        <li>legend</li>
+                        <li>label</li>
+                        <li>input</li>
+                        <li>select</li>
+                    </ul>
+                    <br>
+                    <p>Також познайомилась з різними css-селекторами.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input class="tab-radio" id="main-tab-2" name="main-group" type="radio"/>
+    <div class="tab-content">
+        <div class="sub-tabs-container">
+            <label for="sub-tab2-1">Постановка задачі</label>
+            <label for="sub-tab2-2">Списки</label>
+            <label for="sub-tab2-3">Ідентифікатори</label>
+            <label for="sub-tab2-4">Відступи</label>
+            <label for="sub-tab2-5">Плаваючі елементи</label>
+            <label for="sub-tab2-6">Селектори</label>
+            <label for="sub-tab2-7">Висновки</label>
+        </div>
+        <input class="tab-radio" id="sub-tab2-1" name="sub-group2" type="radio" checked="checked">
+        <div class="sub-tab-content">
+            <div class="sub-tab-content-wrapper">
+                <h1>Постановка задачі</h1>
+                <h2>Тема: КАСКАДНІ ТАБЛИЦІ СТИЛІВ. СЕЛЕКТОРИ. ІДЕНТИФІКАТОРИ. СТИЛЬОВЕ ОФОРМЛЕННЯ ТЕКСТОВИХ ЕЛЕМЕНТІВ В HTML-ДОКУМЕНТАХ.</h2>
+                <p>
+                    Мета: придбати практичні навички роботи з селекторами, ідентифікаторами,
+                    списками, різноманітними властивостями кольору і фону, зовнішними
+                    та внутрішними відступами, плаваючими елементами, оформленням
+                    текстових елементів
+                </p>
+            </div>
+        </div>
+        <input class="tab-radio" id="sub-tab2-2" name="sub-group2" type="radio">
+        <div class="sub-tab-content">
+            <div class="sub-tab-content-wrapper">
+                <h1>Списки</h1>
+                <p>Списки дозволяють веб-розробникам групувати набір пов’язаних елементів в списках.</p>
+                <h2>Невпорядкований HTML Список</h2>
+                <p>Невпорядкований (ненумерований) список починається з тега <code>&lt;ul&gt;</code>.</p>
+                <p>Кожний елемент списку починається з тега <code>&lt;li&gt;</code>.</p>
+                <p>Елементи списку будуть помічені маркерами (маленькі чорні кола) за замовчуванням.</p>
+                <p>Для невпорядкованого спмску можна обрати маркер елементу за допомогою list-style-type.</p>
+                <p>Властивість підтримує наступні значення</p>
+                <ul style="list-style-type:disc;">
+                    <li>disc</li>
+                    <li>circle</li>
+                    <li>square</li>
+                    <li>none</li>
+                </ul>
+                <h2>Впорядкований HTML Список</h2>
+                <p>Невпорядкований (ненумерований) список починається з тега <code>&lt;ol&gt;</code>.</p>
+                <p>Кожний елемент списку починається з тега <code>&lt;li&gt;</code>.</p>
+                <p>Елементи списку будуть помічені номерами за замовчуванням.</p>
+                <p>Для впорядкованого спмску можна обрати маркер елементу за допомогою атрибуту type.</p>
+                <p>Властивість підтримує наступні значення</p>
+                <ul style="list-style-type:square;">
+                    <li><code>1</code> - елементи списка будуть пронумеровані цифрами (за замовчуванням)</li>
+                    <li><code>А</code> - елементи списка будуть пронумеровані заглавними літерами</li>
+                    <li><code>а</code> - елементи списка будуть пронумеровані рядковими літерами</li>
+                    <li><code>І</code> - елементи списка будуть пронумеровані великими римськими цифрами</li>
+                    <li><code>і</code> - елементи списка будуть пронумеровані маленькими римськими цифрами</li>
+                </ul>
+                <h2>HTML Списки опису</h2>
+                <p>Список опису - це список термінів з описом кожного терміна.</p>
+                <p>Тег <code>&lt;dl&gt;</code> визначає список опису, тег <code>&lt;dt&gt;</code> визначає термін (ім’я), а тег <code>&lt;dd&gt;</code> описує кожний термін</p>
+                <h2>Вкладені HTML-списки</h2>
+                <p>Список може бути вкладеним.</p>
+            </div>
+        </div>
+        <input class="tab-radio" id="sub-tab2-3" name="sub-group2" type="radio">
+        <div class="sub-tab-content">
+            <div class="sub-tab-content-wrapper">
+                <h1>Ідентифікатори</h1>
+                <p>Ідентифікатор (званий також «ID селектор») визначає унікальне ім'я елемента, яке використовується для зміни його стилю і звернення до нього через скрипти.</p>
+                <h2>Синтаксис застосування ідентифікатора</h2>
+                <p>#Ім'я ідентифікатора {свойство1: значення; властивість2: значення; ...}</p>
+                <p>При описі ідентифікатора спочатку вказується символ решітки (#), потім йде ім'я ідентифікатора.</p>
+                <p>Воно повинно починатися з латинської символу і може містити в собі символ дефіса (-) і підкреслення (_).</p>
+                <p>Використання російських букв в іменах ідентифікатора неприпустимо.</p>
+                <p>На відміну від класів ідентифікатори повинні бути унікальні, іншими словами, зустрічатися в коді документа лише один раз.</p>
+                <p>Звернення до ідентифікатора відбувається аналогічно класам, але в якості ключового слова у тега використовується атрибут id,</p>
+                <p>значенням якого виступає ім'я ідентифікатора (приклад 9.1). Символ решітки при цьому вже не вказується.</p>
+            </div>
+        </div>
+        <input class="tab-radio" id="sub-tab2-4" name="sub-group2" type="radio">
+        <div class="sub-tab-content">
+            <div class="sub-tab-content-wrapper">
+                <h1>Внутрішні та зовнішні відступи</h1>
+                <h2>Зовнішні відступи (margin)</h2>
+                <p>Властивість margin визначає відступ елемента від інших елементів або границі зовнішнього контейнера.</p>
+                <p>Існують спеціальні властивості CSS для задання відступів для кожної сторони:</p>
+                <ul>
+                    <li>margin-top – відступ зверху;</li>
+                    <li>margin-bottom – відступ знизу;</li>
+                    <li>margin-left – відступ ліворуч;</li>
+                    <li>margin-right – відступ праворуч.</li>
+                </ul>
+                <p>Для встановлення відступів можна використовувати точні значення в пікселях (px) або em, або відсоткові відношення, або auto (автоматична установка відступів).</p>
+                <p>Наприклад, значення 2em визначає відстань, яка вдвічі більша за розмір шрифту елемента.</p>
+                <p>При використанні відсотків веб-браузери обчислюють розмір відступів на основі ширини елемента-контейнера, який містить елемент, що стилізується.</p>
+                <p>У той же час, якщо кілька елементів у нас стикаються, то браузер вибирає найбільший відступ елемента, який потім і використовується.</p>
+                <h2>Внутрішні відступи (padding)</h2>
+                <p>Властивість padding визначає внутрішні відступи від межі елемента до його внутрішнього вмісту.</p>
+                <p>Як і властивість margin, в CSS є чотири властивості, які встановлюють внутрішні відступи кожної зі сторін:</p>
+                <ul>
+                    <li>padding-top – відступ зверху;</li>
+                    <li>padding-bottom – відступ знизу;</li>
+                    <li>padding-left – відступ зліва;</li>
+                    <li>padding-right – відступ справа;</li>
+                </ul>
+                <p>Для встановлення значення внутрішніх відступів, як і для margin, можуть застосовуватися або конкретні значення в пікселях, або відсоткові значення (щодо розмірів елементів).</p>
+                <p>Для внутрішніх та зовнішніх відступів можна використовувати скорочений запис.</p>
+            </div>
+        </div>
+        <input class="tab-radio" id="sub-tab2-5" name="sub-group2" type="radio">
+        <div class="sub-tab-content">
+            <div class="sub-tab-content-wrapper">
+                <h1>Плаваючі елементи</h1>
+                <h2>Float</h2>
+                <p>Властивість float використовується для вирівнювання елемента відносно інших елементів.</p>
+                <p>Елемент з властивістю float виходить з нормального потоку і може плавати ліворуч або праворуч.</p>
+            </div>
+        </div>
+        <input class="tab-radio" id="sub-tab2-6" name="sub-group2" type="radio">
+        <div class="sub-tab-content">
+            <div class="sub-tab-content-wrapper">
+                <h1>Cascading Style Sheets</h1>
+                <p>Будь-який html-документ, скільки він елементів би не містив, буде по суті “мертвим” без використання стилів.</p>
+                <p>Стилі, або краще сказати каскадні таблиці стилів (Cascading Style Sheets), або просто CSS, визначають подання документа, його зовнішній вигляд.</p>
+                <p>Стиль у CSS є правилом, яке вказує веб-браузеру, як треба форматувати елемент.</p>
+                <p>Форматування може включати встановлення кольору фону елемента, встановлення кольору та типу шрифту і так далі.</p>
+                <p>Форматування може включати встановлення кольору фону елемента, встановлення кольору та типу шрифту і так далі.</p>
+                <ul>
+                    <li>селектор, це частина CSS-правила, яка повідомляє браузеру, до якого елементу веб-сторінки буде застосований CSS стиль;</li>
+                    <li>блок оголошення стилю – набір команд, які встановлюють правила форматування.</li>
+                </ul>
+                <h2>Селектори</h2>
+                <ul>
+                    <li>універсальні - *</li>
+                    <li>за типом елемента - div, input</li>
+                    <li>за класом - .className</li>
+                    <li>за ідентифікаторм - #id</li>
+                    <li>за атрибутами - [attr]
+                </ul>
+            </div>
+        </div>
+        <input class="tab-radio" id="sub-tab2-7" name="sub-group2" type="radio">
+        <div class="sub-tab-content">
+            <div class="sub-tab-content-wrapper">
+                <h1>Висновки</h1>
+                <p>Під час виконання роботи навчилась працювати з різними css-селекторами, встановлювати влстивості і значення.</p>
+                <p>Також під час виконання були використані псевдо селектори та різні комбінації</p>
+                <img width="300px;" src="css_selector.png" alt="css selector">
+            </div>
+        </div>
+    </div>
+    <!-- Tab Container 3 -->
+    <input class="tab-radio" id="main-tab-3" name="main-group" type="radio"/>
+    <div class="tab-content">
+        <div class="sub-tabs-container">
+            <label for="sub-tab3-1">Постановка задачі</label>
+            <label for="sub-tab3-2">Flexbox. Скріншот сторінки</label>
+            <label for="sub-tab3-3">Flexbox. HTML-код</label>
+            <label for="sub-tab3-4">Flexbox. СSS</label>
+            <label for="sub-tab3-5">Висновки</label>
+        </div>
+        <input class="tab-radio" id="sub-tab3-1" name="sub-group3" type="radio" checked="checked">
+        <div class="sub-tab-content">
+            <div class="sub-tab-content-wrapper">
+                <h1>Постановка задачі</h1>
+                <h2>Тема: ВЕРСТКА HTML-ДОКУМЕНТУ. БЛОКОВА ВЕРСТКА. ВЕРСТКА ЗАСОБАМИ CSS та FLEXBOX.</h2>
+                <p>
+                    Мета: придбати практичні навички роботи верстки сторінок засобами CSS та FLEXBOX
+                </p>
+            </div>
+        </div>
+        <input class="tab-radio" id="sub-tab3-2" name="sub-group3" type="radio">
+        <div class="sub-tab-content">
+            <div class="sub-tab-content-wrapper">
+                <h1>Flexbox. Скріншот сторінки</h1>
+                <p>На головну сторінку сайту було додано блок Keep up to date</p>
+                <img src="keep_up_to_date_screen.png" alt="Keep up to date" width="700px;">
+            </div>
+        </div>
+        <input class="tab-radio" id="sub-tab3-3" name="sub-group3" type="radio">
+        <div class="sub-tab-content">
+            <div class="sub-tab-content-wrapper">
+                <h1>Flexbox. HTML-код</h1>
+                <pre>
+                    &lt;section&gt;
+                        &lt;h2&gt;Keep up to date&lt;/h2&gt;
+                        &lt;div class="keep_list"&gt;
+                            &lt;div class="keep_item"&gt;
+                                &lt;img src="images/previews/img1.png" alt="Travel Inspiration"&gt;
+                                &lt;a href="/"&gt;Travel Inspiration&lt;/a&gt;
+                                &lt;p&gt;Find out about the +170 direct destinations you can fly to from Dublin Airport.&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="keep_item"&gt;
+                                &lt;img src="images/previews/img2.jpg" alt="Flight Schedules & Map"&gt;
+                                &lt;a href="/"&gt;Flight Schedules & Map&lt;/a&gt;
+                                &lt;p&gt;Now you can view all flight options to your destination of choice from Dublin Airport.&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="keep_item"&gt;
+                                &lt;img src="images/previews/img3.jpg" alt="Flight Schedules & Map"&gt;
+                                &lt;a href="/"&gt;Listening to Passengers&lt;/a&gt;
+                                &lt;p&gt;Please click here for details of our new feedback tools so you can have your say about your airport experience.&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="keep_item"&gt;
+                                &lt;img src="images/previews/img4.jpg" alt="Flight Schedules & Map"&gt;
+                                &lt;a href="/"&gt;Cafes & Restaurants&lt;/a&gt;
+                                &lt;p&gt;Please click here to find the list of all cafés and restaurants open across Departures and Arrivals in Terminals 1 and 2.&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/section&gt;
+                </pre>
+            </div>
+        </div>
+        <input class="tab-radio" id="sub-tab3-4" name="sub-group3" type="radio">
+        <div class="sub-tab-content">
+            <div class="sub-tab-content-wrapper">
+                <h1>Flexbox. СSS</h1>
+                <img src="keep_up_to_date_css.png" width="300px;" alt="Keep up to date css">
+            </div>
+        </div>
+        <input class="tab-radio" id="sub-tab3-5" name="sub-group3" type="radio">
+        <div class="sub-tab-content">
+            <div class="sub-tab-content-wrapper">
+                <h1>Висновки</h1>
+                <p>Під час виконання роботи було додано блок - Keep up to date.</p>
+                <p>Блок було додано за допомогою Flexbox.</p>
+                <p>Flexbox складається з гнучкого контейнера (flex container) і гнучких елементів (flex items). Гнучкі елементи можуть вибудовуватися в рядок або стовпчик, а вільний простір розподіляється між ними різними способами.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab Container 4 -->
+    <input class="tab-radio" id="main-tab-4" name="main-group" type="radio"/>
+    <div class="tab-content">
+        <div class="sub-tabs-container">
+            <label for="sub-tab4-1">Постановка задачі</label>
+            <label for="sub-tab4-2">Проект</label>
+            <label for="sub-tab4-3">Висновки</label>
+        </div>
+        <!-- Sub Tab -->
+        <input class="tab-radio" id="sub-tab4-1" name="sub-group4" type="radio" checked="checked">
+        <div class="sub-tab-content">
+            <div class="sub-tab-content-wrapper">
+                <h1>Постановка задачі</h1>
+                <h2>Тема: АДАПТИВНА ВЕРСТКА. МЕДІА-ЗАПИТИ. МЕДІА-ТИПИ. МЕДІА-ФУНКЦІЇ.
+                    МЕТАТЕГ VIEWPORT. ІНСТРУМЕНТИ РОЗРОБНИКА. СТРАТЕГІЯ MOBILE FIRST.</h2>
+                <p>
+                    Мета: придбати практичні навички роботи маніпулювання інформаційним
+                    вмістом Web-документа засобами мови JavaScript
+                </p>
+            </div>
+        </div>
+        <!-- Sub Tab -->
+        <input class="tab-radio" id="sub-tab4-2" name="sub-group4" type="radio">
+        <div class="sub-tab-content">
+            <div class="sub-tab-content-wrapper">
+                <h1>Проект</h1>
+                <h2>Zoom map</h2>
+                <p>Для проекту було прийнято рішення вивести зображення карти, що масштабується</p>
+                <h2>Вигляд та опис реалізації</h2>
+                <img src="map.png" alt="table">
+            </div>
+        </div>
+        <input class="tab-radio" id="sub-tab4-3" name="sub-group4" type="radio">
+        <div class="sub-tab-content">
+            <div class="sub-tab-content-wrapper">
+                <h1>Висновки</h1>
+                <p>Взаємодія з користувачем: JavaScript дозволяє створювати взаємодію на сторінці, таку як обробка подій миші та клавіш, анімації, валідація форм, спливаючі вікна та інші елементи, які роблять веб-сайти більш динамічними і користувацькими.
+                    Маніпуляція DOM: JavaScript використовується для доступу до та зміни елементів на веб-сторінці, що дозволяє динамічно змінювати вміст та структуру сторінки під час її взаємодії з користувачем.
+                    Асинхронні запити: JavaScript дозволяє виконувати асинхронні запити на сервер, що дозволяє обмінюватися даними між клієнтом та сервером без перезавантаження сторінки. Це використовується, наприклад, для завантаження даних без оновлення всієї сторінки.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab Container 5 -->
+    <input class="tab-radio" id="main-tab-5" name="main-group" type="radio"/>
+    <div class="tab-content">
+        <div class="sub-tabs-container">
+            <label for="sub-tab5-1">Постановка задачі</label>
+            <label for="sub-tab5-2">Завдання 1</label>
+            <label for="sub-tab5-3">Завдання 2</label>
+            <label for="sub-tab5-4">Висновки</label>
+        </div>
+        <!-- Sub Tab -->
+        <input class="tab-radio" id="sub-tab5-1" name="sub-group5" type="radio" checked="checked">
+        <div class="sub-tab-content">
+            <div class="sub-tab-content-wrapper">
+                <h1>Постановка задачі</h1>
+                <h2>Тема: ФУНКЦІОНАЛЬНЕ ЗАСТОСУВАННЯ JAVASCRIPT У HTML-ДОКУМЕНТІ.
+                    КЛАСИ,ОБ’ЄКТИ, ФУНКЦІЇ, В МОВІ JAVASCRIPT. ПОДІЇ ТА ОБРОБКА ПОДІЙ.
+                    ПРОГРАМНА ВЗАЄМОДІЯ З HTML ДОКУМЕНТАМИ НА ОСНОВІ DOM АРІ</h2>
+                <p>
+                    Мета: придбати практичні навички роботи маніпулювання інформаційним
+                    вмістом Web-документа засобами мови JavaScript
+                </p>
+            </div>
+        </div>
+        <!-- Sub Tab -->
+        <input class="tab-radio" id="sub-tab5-2" name="sub-group5" type="radio">
+        <div class="sub-tab-content">
+            <div class="sub-tab-content-wrapper">
+                <h1>Завдання 1</h1>
+                <p>Згенерувати значення елементів одновимірного масиву за допомогою генератора
+                    псевдовипадкових чисел, задавши кількість елементів масиву з клавіатури.
+                    Знайти мінімальний за значенням елемент і записати його на початок масиву,
+                    звільнивши для нього місце шляхом зсуву елементів масиву вправо.
+                </p>
+                <p>
+                    Упорядкувати масив у порядку зменшення методом вибору. Надрукувати
+                    вхідний та вихідний масив.
+                    Застосувати функції
+                </p>
+                <h2>Вигляд та опис реалізації</h2>
+                <p>Після того, як користувач нажав на кнопку "Генерувати та сортувати", </p>
+                <p>відбувається валідація введеного значення, створюється відповідний масив та виконуються необхідні дії</p>
+                <img src="lab_4_1.png" alt="table">
+            </div>
+        </div>
+        <input class="tab-radio" id="sub-tab5-3" name="sub-group5" type="radio">
+        <div class="sub-tab-content">
+            <div class="sub-tab-content-wrapper">
+                <h1>Завдання 2</h1>
+                <h2>Спливаюча підказка</h2>
+                <p>Надати можливість виведення спливаючої підказки
+                    при наведенні миші над текстом Web-сторінки.
+                    Передбачити можливість створення нових підказок
+                    та їх підключення до обраного фрагменту тексту.
+                </p>
+                <h2>Вигляд та опис реалізації</h2>
+                <p>Основний функціонал</p>
+                <ul>
+                    <li>Створення підказок для видбраних фрагментів</li>
+                    <li>Відображення вже існуючих підказок для видбраних фрагментів</li>
+                    <li>Збереження закладок у локал підказок</li>
+                    <li>Видалення підказок</li>
+                </ul>
+                <img src="toolTips.png" alt="table">
+            </div>
+        </div>
+        <input class="tab-radio" id="sub-tab5-4" name="sub-group5" type="radio">
+        <div class="sub-tab-content">
+            <div class="sub-tab-content-wrapper">
+                <h1>Висновки</h1>
+                <p>Взаємодія з користувачем: JavaScript дозволяє створювати взаємодію на сторінці, таку як обробка подій миші та клавіш, анімації, валідація форм, спливаючі вікна та інші елементи, які роблять веб-сайти більш динамічними і користувацькими.
+                    Маніпуляція DOM: JavaScript використовується для доступу до та зміни елементів на веб-сторінці, що дозволяє динамічно змінювати вміст та структуру сторінки під час її взаємодії з користувачем.
+                    Асинхронні запити: JavaScript дозволяє виконувати асинхронні запити на сервер, що дозволяє обмінюватися даними між клієнтом та сервером без перезавантаження сторінки. Це використовується, наприклад, для завантаження даних без оновлення всієї сторінки.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab Container 6 -->
+    <input class="tab-radio" id="main-tab-6" name="main-group" type="radio"/>
+    <div class="tab-content">
+        <div class="sub-tabs-container">
+            <label for="sub-tab6-1">Постановка задачі</label>
+            <label for="sub-tab6-2">Завдання 1</label>
+            <label for="sub-tab6-3">Завдання 3</label>
+            <label for="sub-tab6-4">Завдання 5</label>
+            <label for="sub-tab6-5">Завдання 7</label>
+            <label for="sub-tab6-6">Завдання 9</label>
+            <label for="sub-tab6-7">Завдання 10</label>
+            <label for="sub-tab6-8">Висновки</label>
+        </div>
+        <!-- Sub Tab -->
+        <input class="tab-radio" id="sub-tab6-1" name="sub-group6" type="radio" checked="checked">
+        <div class="sub-tab-content">
+            <div class="sub-tab-content-wrapper">
+                <h1>Постановка задачі</h1>
+                <h2>Тема: ОБ'ЄКТ. МЕТОДИ ОБ'ЄКТА. МАСИВ ОБ'ЄКТІВ. ДЕСТРУКТУРИЗАЦІЯ ОБ'ЄКТІВ.
+                    CALLBACK. СТРІЛОЧНІ ФУНКЦІЇ. СТРІЛОЧНІ ФУНКЦІЇ ЯК КОЛБЕКИ.</h2>
+                <p>
+                    Мета: придбати практичні навички роботи з об'єктами. Методи об'єкта.
+                    Callback. Стрілочні функції. Стрілочні функції як колбеки. Реалізація програм засовами мови JAVASCRIPT
+                </p>
+            </div>
+        </div>
+        <!-- Sub Tab -->
+        <input class="tab-radio" id="sub-tab6-2" name="sub-group6" type="radio">
+        <div class="sub-tab-content">
+            <div class="sub-tab-content-wrapper">
+                <h1>Завдання 1</h1>
+                <p>Напишіть наступні функції: createProduct(obj, callback) - приймає об'єкт товару без id, а також коллбек.
+                    Функція створює об'єкт товару, додаючи йому унікальний ідентифікатор у властивість id та викликає коллбек передаючи йому створений об'єкт.
+                </p>
+                <p>
+                    logProduct(product) - колббек що приймає об'єкт продукту і логуючий його в консоль
+                    logTotalPrice(product) - колббек, що приймає об'єкт продукту і логіює загальну вартість товару в консоль
+                </p>
+                <h2>Вигляд та опис реалізації</h2>
+                <p>Для реалізації поточного та наступних завдань була обрана мова програмування TypeScript,</p>
+                <p>котра позиціонується як засіб розробки вебзастосунків, що розширює можливості JavaScript.</p>
+                <img src="lab6_1.png" alt="table">
+            </div>
+        </div>
+        <input class="tab-radio" id="sub-tab6-3" name="sub-group6" type="radio">
+        <div class="sub-tab-content">
+            <div class="sub-tab-content-wrapper">
+                <h1>Завдання 3</h1>
+                <p>З об'єкту medicines потрібно отримати масив в якому будуть лише назви препаратів.</p>
+                <p>З масиву  потрібно прибрати медикаменти , в яких строк зберігання  уже пройшов . У новому масиві відсортувати медикаменти  у хронологічному порядку.</p>
+                <p>Результат вивести у консоль. Застосувати стрілочні функції</p>
+                <h2>Вигляд та опис реалізації</h2>
+                <img src="lab6_3.png" alt="table">
+            </div>
+        </div>
+        <input class="tab-radio" id="sub-tab6-4" name="sub-group6" type="radio">
+        <div class="sub-tab-content">
+            <div class="sub-tab-content-wrapper">
+                <h1>Завдання 5</h1>
+                <p>Напишіть функцію, яка приймає массив об'єктів і повертає новий массив
+                    Зробіть знижку 20 % на всі фрукти у масиві
+                    Надайте ід для кожного продукту</p>
+                <h2>Вигляд та опис реалізації</h2>
+                <img src="lab6_5.png" alt="table">
+            </div>
+        </div>
+        <input class="tab-radio" id="sub-tab6-5" name="sub-group6" type="radio">
+        <div class="sub-tab-content">
+            <div class="sub-tab-content-wrapper">
+                <h1>Завдання 7</h1>
+                <p>Напиши клас Client який створює об'єкт
+                    з властивостями login email
+                    Оголоси приватні властивості #login #email,
+                    доступ до яких зроби через геттер та сеттер login email</p>
+                <h2>Вигляд та опис реалізації</h2>
+                <p>Основний функціонал</p>
+                <img src="lab6_7.png" alt="table">
+            </div>
+        </div>
+        <input class="tab-radio" id="sub-tab6-6" name="sub-group6" type="radio">
+        <div class="sub-tab-content">
+            <div class="sub-tab-content-wrapper">
+                <h1>Завдання 9</h1>
+                <p>Поверніть об'єкт, в якому вказано кількість тегів.
+                    Очікуваний результат {js: 3, nodejs: 3, html: 2, css: 2, react: 2}</p>
+                <h2>Вигляд та опис реалізації</h2>
+                <img src="lab6_9.png" alt="table">
+            </div>
+        </div>
+        <input class="tab-radio" id="sub-tab6-7" name="sub-group6" type="radio">
+        <div class="sub-tab-content">
+            <div class="sub-tab-content-wrapper">
+                <h1>Завдання 10</h1>
+                <p>Напишіть функцію checkBrackets(str) яка приймає рядок жс коду (someFn) і перевіряє правильність закриття дужок () {} []
+                    Якщо рядок містить коректний код функція повертає true.
+                    В іншому випадку повертає false
+                </p>
+                <h2>Вигляд та опис реалізації</h2>
+                <p>Основний функціонал</p>
+                <img src="lab6_10.png" alt="table">
+            </div>
+        </div>
+        <input class="tab-radio" id="sub-tab6-8" name="sub-group6" type="radio">
+        <div class="sub-tab-content">
+            <div class="sub-tab-content-wrapper">
+                <h1>Висновки</h1>
+                <p>TypeScript — це надбудова над JavaScript, що додає статичну типізацію та розширені можливості для розробки.
+                    Об'єкти в TypeScript використовуються для зберігання даних у форматі ключ-значення.
+                    Методи об'єкта — це функції, які є властивостями об'єкта, що дозволяє виконувати дії або обробляти дані, пов'язані з цим об'єктом.
+                    Масив об'єктів — це структура даних, що дозволяє зберігати кілька об'єктів у одному масиві, що дуже корисно для роботи зі списками даних.
+                    Деструктуризація об'єктів — це синтаксична можливість, яка дозволяє розпаковувати властивості об'єкта у окремі змінні,
+                    що спрощує доступ до значень об'єкта. Callback-функції — це функції, що передаються як аргументи іншим функціям і
+                    викликаються після завершення певної дії. Стрілочні функції — це короткий синтаксис для написання функцій,
+                    який зберігає контекст this з оточуючого коду. Стрілочні функції часто використовуються як callback-функції завдяки їх зручному синтаксису
+                    та властивостям.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Tab Container 7 -->
+    <input class="tab-radio" id="main-tab-7" name="main-group" type="radio"/>
+    <div class="tab-content">
+        <div class="sub-tabs-container">
+            <label for="sub-tab7-1">Постановка задачі</label>
+            <label for="sub-tab7-2">Завдання 1</label>
+            <label for="sub-tab7-8">Висновки</label>
+        </div>
+        <!-- Sub Tab -->
+        <input class="tab-radio" id="sub-tab7-1" name="sub-group6" type="radio" checked="checked">
+        <div class="sub-tab-content">
+            <div class="sub-tab-content-wrapper">
+                <h1>Постановка задачі</h1>
+                <h2>Тема: КЛАСИ. ОБ'ЄКТНА МОДЕЛЬ ДОКУМЕНТА (DOM). ПОДІЇ. ОБ'ЄКТ ПОДІЇ.
+                    ДЕЛЕГУВАННЯ ПОДІЙ. THROTTLE. МОДУЛЬНОСТЬ КОДУ.</h2>
+                <p>
+                    Мета: придбати практичні навички роботи з об'єктами. Методи об'єкта.
+                    Callback. Стрілочні функції. Стрілочні функції як колбеки. Реалізація програм засовами мови JAVASCRIPT
+                </p>
+            </div>
+        </div>
+        <!-- Sub Tab -->
+        <input class="tab-radio" id="sub-tab7-2" name="sub-group6" type="radio">
+        <div class="sub-tab-content">
+            <div class="sub-tab-content-wrapper">
+                <main>
+                    <div>
+                        <div>
+                            <p>Task 1. Enter a value:</p>
+                            <input type="text" id="fn_show_my_value">
+                            <button id="fn_show_me">SHOW ME</button>
+                        </div>
+                        <br/>
+                        <div>
+                            <p>Task 3</p>
+                            <input type="text" id="fn_hide_my_value" type="text" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua" />
+                            <button id="fn_hide_me">HIDE</button>
+                        </div>
+                        <br/>
+                        <div>
+                            <p>Task 5</p>
+                            <div id="box-place">
+                                <p class="taskTitle">Завдання 5</p>
+                                <div id="place"></div>
+                            </div>
+                        </div>
+                        <br/>
+                        <div>
+                            <p>Task 7</p>
+                            <div id="box-category">
+                                <ul id="categories">
+                                    <li class="item">
+                                        <h2>Animals</h2>
+                                        <ul>
+                                            <li>*Cat</li>
+                                            <li>*Hamster</li>
+                                            <li>*Horse</li>
+                                            <li>*Parrot</li>
+                                        </ul>
+                                    </li>
+                                    <li class="item">
+                                        <h2>Products</h2>
+                                        <ul>
+                                            <li>*Bread</li>
+                                            <li>*Prasley</li>
+                                            <li>*Cheese</li>
+                                        </ul>
+                                    </li>
+                                    <li class="item">
+                                        <h2>Technologies</h2>
+                                        <ul>
+                                            <li>*HTML</li>
+                                            <li>*CSS</li>
+                                            <li>*JavaScrip</li>
+                                            <li>*React</li>
+                                            <li>*Node.js</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Task 8</p>
+                            <form class="login-form">
+                                <label for="email">Email<input type="email" name="email" id="email"></label>
+                                <label for="password">Password<input type="password" name="password" id="password"></label>
+                                <button type="submit">Log In</button>
+                            </form>
+                        </div>
+                        <div>
+                            <p>Task 9</p>
+                            <div class="widget">
+                                <p>Background color: <span class="color">-</span></p>
+                                <button type="button" class="change-color">ChangeColor</button>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Task 10</p>
+                            <div id="controls">
+                                <input type="number" id="countBoxToCreate" min="1" max="100" step="1">
+
+                                <button type="button" data-create>Create</button>
+                                <button type="button" data-destroy>Destroy</button>
+                                <div id="boxes"></div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <input class="tab-radio" id="sub-tab7-8" name="sub-group6" type="radio">
+        <div class="sub-tab-content">
+            <div class="sub-tab-content-wrapper">
+                <h1>Висновки</h1>
+                <p>DOM (Document Object Model) — це програмний інтерфейс для HTML документів,
+                    який представляє документ як дерево об'єктів. Кожен вузол цього дерева є частиною документа: елементи, атрибути, текстові вузли тощо.
+                    Робота з DOM дозволяє динамічно змінювати структуру, стиль і вміст веб-сторінок за допомогою скриптів.
+                    Основні операції з DOM включають:
+                    Доступ до елементів: використання методів на кшталт getElementById, querySelector, getElementsByClassName для отримання елементів.
+                    Маніпуляція елементами: зміна вмісту, стилів, атрибутів елементів. Додавання або видалення вузлів.
+                    Обробка подій: додавання слухачів подій (addEventListener) для обробки взаємодій користувача, таких як кліки, натискання клавіш і т.д.
+                    Створення нових елементів: використання методів createElement, appendChild для додавання нових елементів до DOM.
+                    DOM є важливою частиною веб-розробки, оскільки дозволяє створювати інтерактивні і динамічні веб-сторінки.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="js/domScript.js"></script>
+</body>
+</html>
